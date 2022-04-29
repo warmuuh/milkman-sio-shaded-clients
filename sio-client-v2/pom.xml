@@ -48,7 +48,7 @@
               <relocations>
                 <relocation>
                   <pattern>io.socket</pattern>
-                  <shadedPattern>milkman.sio.shaded.v4</shadedPattern>
+                  <shadedPattern>milkman.sio.shaded.v2</shadedPattern>
                 </relocation>
               </relocations>
             </configuration>

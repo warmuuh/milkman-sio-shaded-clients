@@ -6,7 +6,7 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>sio-client-v1</artifactId>
+  <artifactId>sio-client-v09</artifactId>
   <build>
     <plugins>
       <plugin>
@@ -30,7 +30,7 @@
               <relocations>
                 <relocation>
                   <pattern>io.socket</pattern>
-                  <shadedPattern>milkman.sio.shaded.v1</shadedPattern>
+                  <shadedPattern>milkman.sio.shaded.v09</shadedPattern>
                 </relocation>
               </relocations>
             </configuration>
@@ -43,13 +43,13 @@
     <dependency>
       <groupId>com.squareup.okhttp3</groupId>
       <artifactId>okhttp</artifactId>
-      <version>3.12.12</version>
+      <version>3.8.1</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>com.squareup.okio</groupId>
       <artifactId>okio</artifactId>
-      <version>1.15.0</version>
+      <version>1.13.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>

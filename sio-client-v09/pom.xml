@@ -16,4 +16,45 @@
     <maven.compiler.target>11</maven.compiler.target>
   </properties>
 
+  <dependencies>
+    <dependency>
+      <groupId>io.socket</groupId>
+      <artifactId>socket.io-client</artifactId>
+      <version>0.9.0</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.3.0</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <artifactSet>
+                <includes>
+                  <include>io.socket:socket.io-client</include>
+                  <include>io.socket:engine.io-client</include>
+                </includes>
+              </artifactSet>
+              <useDependencyReducedPomInJar>true</useDependencyReducedPomInJar>
+              <promoteTransitiveDependencies>true</promoteTransitiveDependencies>
+              <relocations>
+                <relocation>
+                  <pattern>io.socket</pattern>
+                  <shadedPattern>milkman.sio.shaded.v09</shadedPattern>
+                </relocation>
+              </relocations>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </project>
